@@ -44,6 +44,19 @@ Kritériumok az adatbázissal kapcsolatban:
     - az adatbázis, a táblák és a mezők elnevezése rajtad áll, azonban használj angol megnevezéseket, méghozzá következetesen
       (ha az egyik táblában camel-case szerinti mező-neveket adtál, akkor a másik táblában is tégy úgy)
 
+   1.
+    CREATE TABLE `gigapoli_2020_maj`.`Regisztrált felhasználók adatai`
+    ( `Név` VARCHAR(100) NOT NULL , `E-mail` VARCHAR(100) NOT NULL , `Password` VARCHAR(12) NOT NULL ,
+    `Active` BOOLEAN on update CURRENT_TIMESTAMP NOT NULL ,
+     `Regisztrálás időpontja` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+     PRIMARY KEY (`Név`(100))) ENGINE = InnoDB;
+    2.
+    CREATE TABLE `gigapoli_2020_maj`.`Regisztrált felhasználók adatai`
+    ( `Küldö` VARCHAR(100) NOT NULL , `Címzett` VARCHAR(100) NOT NULL ,
+    `Text` VARCHAR(1000) NOT NULL , `Küldés időpontja`
+     TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+     `Reply` TIMESTAMP NOT NULL , PRIMARY KEY (`Küldö`(100))) ENGINE = InnoDB;
+
 */
 
 
